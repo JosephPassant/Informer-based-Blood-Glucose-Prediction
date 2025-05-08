@@ -18,7 +18,7 @@ from metrics import *
 from utilities import *
 from dual_weighted_loss_function import *
 # Set configuration file path
-config_path = os.path.join(PROJECT_ROOT, 'evaluation_files', 'evaluation_config_without_feature_enhancement.json')
+config_path = os.path.join(PROJECT_ROOT, 'models/shared_config_files/evaluation_config_without_feature_enhancement.json')
 
 # Load configuration file
 config_dict = load_config(config_path)
