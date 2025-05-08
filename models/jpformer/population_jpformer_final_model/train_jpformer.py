@@ -126,7 +126,7 @@ if __name__ == "__main__":
 
     print("-------------Training-------------")
     
-    save_dir = os.path.join(PROJECT_ROOT, "models/jpformer/final_model_training_files")
+    save_dir = os.path.join(PROJECT_ROOT, "models/jpformer/population_jpformer_final_model/population_jpformer_replace_bg_aggregate_results")
     os.makedirs(save_dir, exist_ok=True)
 
 

@@ -1,12 +1,8 @@
 import os
 import sys
-import time
 import torch
 import torch.nn.functional as F
 import numpy as np
-import yaml
-import transformers
-import shutil
 import json
 import pandas as pd
 from torch.utils.data import DataLoader
@@ -19,6 +15,7 @@ from datetime import datetime
 current_dir = os.path.dirname(os.path.abspath(__file__))
 PROJECT_ROOT = os.path.abspath(os.path.join(current_dir, "../../../"))
 
+print(PROJECT_ROOT)
 
 sys.path.append(os.path.join(PROJECT_ROOT, "shared_utilities"))
 from utilities import *
@@ -339,7 +336,7 @@ def main():
         optimizer, lr_scheduler = setup_optimizer_scheduler(model, config, iterations_per_epoch)
         
         # Create patient-specific directories
-        patient_dir = os.path.join(PROJECT_ROOT, "models", "jpformer", "fine_tuning_development_files", "population_jpformer_ohio_ptid_eval_results", f"patient_{patient_id}")
+        patient_dir = os.path.join(PROJECT_ROOT, "models", "jpformer", "population_jpformer_final_model", "population_jpformer_ohio_ptid_results", f"patient_{patient_id}")
         create_dir(patient_dir)
         
         # Create base model and fine-tuning evaluation directories
