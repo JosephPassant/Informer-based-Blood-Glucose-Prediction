@@ -582,7 +582,7 @@ def train_patient_model(
     # Save best model
     best_model_path = None
     if best_model_state_dict:
-        save_dir = os.path.join(PROJECT_ROOT, "models", "jpformer","fine_tuning_development_files", "dropout", "03", f"patient_{patient_id}")
+        save_dir = os.path.join(PROJECT_ROOT, f"models/jpformer/fine_tuning_development_files/loss_function_weights_lowest/patient_{patient_id}/fine_tuning_eval")
         create_dir(save_dir)
 
         best_model_path = os.path.join(save_dir, f"patient_{patient_id}_EP_{best_ep_percent:.1f}_RMSE_{best_rmse:.4f}.pth")
@@ -655,8 +655,8 @@ def main():
     patient_ids = [540, 544, 552, 559, 563, 567, 570, 575, 584, 588, 591, 596]
     
     # Pretrained weights path
-    pretrained_weights_path = os.path.join(PROJECT_ROOT, "models/jpformer/final_model_training_files/jpformer_dual_weighted_rmse_loss_func_high_dim_4_enc_lyrs_high_dropout_0.5696_MAE_0.3965.pth")
-    
+    pretrained_weights_path = os.path.join(PROJECT_ROOT, "models/jpformer/population_jpformer_final_model/population_jpformer_replace_bg_aggregate_results/jpformer_dual_weighted_rmse_loss_func_high_dim_4_enc_lyrs_high_dropout_0.5696_MAE_0.3965.pth")
+  
     # Loss function weights
 
     ap_weight = 0
